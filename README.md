@@ -72,22 +72,95 @@ token_appcheck_akun_2
 
 ---
 
-### 4. Siapkan file akun  
-Buat file `akun1.json`, `akun2.json`, dst berisi struktur seperti berikut:
+---
+
+## 📁 Contoh Struktur File Akun (`akunX.json`)
 
 ```json
 {
   "MINES": {
-    "CLAY 1": { "mine_id": "abc123" }
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
   },
   "FACTORIES": {
-    "CERAMIC FACTORY": { "factory_id": "def456" }
+    "MUD 1": {
+      "factory_id": "06891bba-2b02-70c4-8000-f06a87253945"
+    },
+    "CLAY 1": {
+      "factory_id": "06891d63-328f-75c2-8000-ff149ed8ec78"
+    },
+    ...//dan seterusnya
   },
-  "UPGRADES": {},
-  "CLAIM_AREAS": {},
-  "CLAIMS": {},
-  "UPGRADE_MINES": {}
+  "UPGRADES": {
+    "MUD 1": {
+      "factory_id": "06891bba-2b02-70c4-8000-f06a87253945"
+    },
+    "CLAY 1": {
+      "factory_id": "06891d63-328f-75c2-8000-ff149ed8ec78"
+    },
+    ...//dan seterusnya
+  },
+  "CLAIM_AREAS": {
+    "MUD": {
+      "area_id": "06891b3f-2add-72f1-8000-76f91ad17502"
+    },
+    "CLAY": {
+      "area_id": "06891e01-2e89-7ac4-8000-706e1969499d"
+    },
+    ...//dan seterusnya
+  },
+  "CLAIMS": {
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
+  },
+  "UPGRADE_MINES": {
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
+  }
 }
+```
+
+---
+
+## 🔍 Keterangan Penting:
+
+- Nama seperti `"EARTH"`, `"MUD 1"` hanyalah label bebas (alias). Kamu bisa ganti jadi `"TANAH"`, `"LEMPUNG A"`, dll.
+- Nilai ID (`mine_id`, `factory_id`, `area_id`) harus diambil dari DevTools di akun masing-masing (Inspect → Network).
+- **Jangan ubah nilai ID sembarangan.** Salah ID = bot gagal.
+- Gunakan struktur JSON dengan teliti, tanda `{}`, `:`, dan `,` harus sesuai.
+
+---
+
+## ⚠️ Catatan Multi Akun
+
+Untuk menjalankan **lebih dari satu akun**, buat file baru untuk setiap akun:
+
+```
+akun1.json
+akun2.json
+akun3.json
+...
+```
+
+> ⚠️ Setiap akun punya ID berbeda.
+>
+> Kamu wajib mengambil ulang semua `mine_id`, `factory_id`, dan `area_id` dari akun masing-masing.
+>
+> ❌ Jangan salin ID dari akun lain  
+> ✅ Harus ambil manual lewat DevTools setiap akun
+
+---
+
+## 🧠 Ingat!
+
+- **`MINES`, `CLAIMS`, dan `UPGRADE_MINES` hanya butuh 1 ID per akun.**
+- **`FACTORIES`, `UPGRADES`, dan `CLAIM_AREAS` bisa lebih dari 1, sesuai jumlah bangunan di akunmu.**
+- Buat file akun serapi mungkin agar bot bisa membaca dan eksekusi dengan benar.
+
+
 ```
 
 ---
@@ -136,5 +209,5 @@ ENABLE_UPGRADE_MINE = True
 
 ## 💬 Kontak
 
-Dibuat oleh [@username](https://t.me/yourusername)  
+Dibuat oleh [@kontolkuda](https://t.me/jamalnggau36)  
 Kontribusi, ide, dan feedback sangat diterima!
