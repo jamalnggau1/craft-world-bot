@@ -180,12 +180,16 @@ Bot akan:
 
 ## ⚙️ Konfigurasi Tambahan
 
-Aktifkan fitur upgrade otomatis:
+Aktifkan/Nonaktifkan fitur upgrade otomatis pada file `main.py`. Cari bagian berikut:
 
 ```python
+# Aktifkan fitur upgrade otomatis (jika perlu)
 ENABLE_UPGRADE_FACTORY = True
 ENABLE_UPGRADE_MINE = True
 ```
+
+- Jika tidak ingin upgrade otomatis, ubah `True` menjadi `False`.
+- Pastikan kamu mengedit file `main.py`, bukan file lain.
 
 ---
 
