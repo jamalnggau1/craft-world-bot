@@ -1,0 +1,44 @@
+{
+  "MINES": {
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
+  },
+  "FACTORIES": {
+    "MUD 1": {
+      "factory_id": "06891bba-2b02-70c4-8000-f06a87253945"
+    },
+    "CLAY 1": {
+      "factory_id": "06891d63-328f-75c2-8000-ff149ed8ec78"
+    },
+    ...//dan seterusnya
+  },
+  "UPGRADES": {
+    "MUD 1": {
+      "factory_id": "06891bba-2b02-70c4-8000-f06a87253945"
+    },
+    "CLAY 1": {
+      "factory_id": "06891d63-328f-75c2-8000-ff149ed8ec78"
+    },
+    ...//dan seterusnya
+  },
+  "CLAIM_AREAS": {
+    "MUD": {
+      "area_id": "06891b3f-2add-72f1-8000-76f91ad17502"
+    },
+    "CLAY": {
+      "area_id": "06891e01-2e89-7ac4-8000-706e1969499d"
+    },
+    ...//dan seterusnya
+  },
+  "CLAIMS": {
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
+  },
+  "UPGRADE_MINES": {
+    "EARTH": {
+      "mine_id": "06890dbc-5d47-7ae1-8000-0e66f2610153"
+    }
+  }
+}
