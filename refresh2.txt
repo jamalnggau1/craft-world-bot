@@ -1,4 +1,0 @@
-{
-  "refresh_token": "xxx",
-  "api_key": "yyy"
-}
